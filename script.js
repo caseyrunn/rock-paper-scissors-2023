@@ -5,8 +5,6 @@ function getComputerChoice(){
 //  If 3, return scissors;
 }
 
-function oneTwoOrThree(){
-    //  Randomly generate number 0-1;
-    //  Multiply number by 3;
-    //  Round down to closest whold number;  
+function zeroOneorTwo(){
+    return Math.floor(Math.random()*3);  
     }
