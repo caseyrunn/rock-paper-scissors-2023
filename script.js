@@ -1,4 +1,4 @@
-function getComputerChoice(){
+/*function getComputerChoice(){
     let number = Math.floor(Math.random()*3);
     if (number === 0){
         return "rock";
@@ -12,7 +12,7 @@ function getComputerChoice(){
 }
 
 function getPlayerChoice(){
-    let playerSelection = prompt("Rock, Paper, or Scissors?");
+    let playerSelection = (prompt("Rock, Paper, or Scissors?")).toLowerCase();
     return playerSelection;
 }
 
@@ -59,10 +59,13 @@ function game(){
         console.log("It was a tie!")
     }
 }
+*/
 
 
+function getPlayerChoice(){
+    let playerSelection = prompt("Rock, Paper, or Scissors?");
+    console.log(playerSelection.toLowerCase());
+}
 
-game();
-
-
+getPlayerChoice();
 
