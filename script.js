@@ -1,13 +1,13 @@
 function getComputerChoice(){
     let number = Math.floor(Math.random()*3);
     if (number === 0){
-        console.log(0);
+        return "rock";
     } else if (number ===1){
-        console.log(1);
+        return "paper";
     } else {
-        console.log(2);
+        return "scissors";
     }
 }
 
 
-getComputerChoice();
+console.log(getComputerChoice());
