@@ -10,6 +10,7 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
+    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
         return ("It's a tie!");
     }else if (playerSelection === "rock"){
@@ -31,18 +32,6 @@ function playRound(playerSelection, computerSelection){
             return("Player wins!");
         }
     }
-
-
-    //else if player selects paper:
-        //and computer selects rock
-            //player wins
-        //and computer selects scissors
-            //computer wins
-    //else if player selects scissors
-        //and computer selects rock
-            //computer wins
-        //and computer selects paper
-            //computer wins
 }
 
-console.log(playRound("paper","scissors"));
+console.log(playRound("Scissors","paper"));
