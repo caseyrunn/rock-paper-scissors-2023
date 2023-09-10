@@ -11,6 +11,11 @@ function getComputerChoice(){
     }
 }
 
+function getPlayerChoice(){
+    let playerSelection = prompt("Rock, Paper, or Scissors?");
+    return playerSelection;
+}
+
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
@@ -53,10 +58,11 @@ function game(){
     } else {
         console.log("It was a tie!")
     }
-
-
-    //play 5 rounds
 }
 
+
+
 game();
+
+
 
