@@ -10,13 +10,29 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    //if player and computer have same selection
-        //it's a tie
-    //else if player selects rock:
-        //and computer selects paper
-            //computer wins
-        //and computer selects scissors
-            //player wins
+    if (playerSelection === computerSelection){
+        return ("It's a tie!");
+    }else if (playerSelection === "rock"){
+        if (computerSelection === "paper"){
+            return ("Computer wins!");
+        }else{
+            return ("Player wins!");
+        }
+    } else if (playerSelection === "paper"){
+        if(computerSelection === "scissors"){
+            return("Computer wins!");
+        }else{
+            return("Player wins!");
+        }
+    } else if (playerSelection === "scissors"){
+        if(computerSelection === "rock"){
+            return("Computer wins!");
+        }else{
+            return("Player wins!");
+        }
+    }
+
+
     //else if player selects paper:
         //and computer selects rock
             //player wins
@@ -29,4 +45,4 @@ function playRound(playerSelection, computerSelection){
             //computer wins
 }
 
-console.log(getComputerChoice());
+console.log(playRound("paper","scissors"));
