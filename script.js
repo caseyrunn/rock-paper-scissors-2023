@@ -1,4 +1,4 @@
-/*function getComputerChoice(){
+function getComputerChoice(){
     let number = Math.floor(Math.random()*3);
     if (number === 0){
         return "rock";
@@ -12,12 +12,12 @@
 }
 
 function getPlayerChoice(){
-    let playerSelection = (prompt("Rock, Paper, or Scissors?")).toLowerCase();
-    return playerSelection;
+    let playerSelection = prompt("Rock, Paper, or Scissors?");
+    return (playerSelection.toLowerCase());
 }
 
+
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
         return ("tie");
     }else if (playerSelection === "rock"){
@@ -45,7 +45,7 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
 
-    let playerSelection = prompt("Rock, paper, or scissors?");
+    let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
 
     let winnerThisRound = playRound(playerSelection, computerSelection);
@@ -59,13 +59,4 @@ function game(){
         console.log("It was a tie!")
     }
 }
-*/
-
-
-function getPlayerChoice(){
-    let playerSelection = prompt("Rock, Paper, or Scissors?");
-    console.log(playerSelection.toLowerCase());
-}
-
-getPlayerChoice();
 
