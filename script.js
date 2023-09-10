@@ -35,8 +35,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    //Create counter for player's score
-    //Create counter for computer's score
+    let playerScore = 0;
+    let computerScore = 0;
     //Call playRound
     //if player wins, add a point to their score
     //if computer wins, add a point to its score
