@@ -4,32 +4,34 @@ function getComputerChoice(){
         return "rock";
     } else if (number ===1){
         return "paper";
-    } else {
+    } else if (number === 2) {
         return "scissors";
+    } else {
+        console.log("error");
     }
 }
 
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection){
-        return ("It's a tie!");
+        return ("tie");
     }else if (playerSelection === "rock"){
         if (computerSelection === "paper"){
-            return ("Computer wins!");
+            return ("computer");
         }else{
-            return ("Player wins!");
+            return ("player");
         }
     } else if (playerSelection === "paper"){
         if(computerSelection === "scissors"){
-            return("Computer wins!");
+            return("computer");
         }else{
-            return("Player wins!");
+            return("player");
         }
     } else if (playerSelection === "scissors"){
         if(computerSelection === "rock"){
-            return("Computer wins!");
+            return("computer");
         }else{
-            return("Player wins!");
+            return("player");
         }
     }
 }
@@ -41,13 +43,20 @@ function game(){
     let playerSelection = prompt("Rock, paper, or scissors?");
     let computerSelection = getComputerChoice();
 
-    console.log(playRound(playerSelection, computerSelection));
+    let winnerThisRound = playRound(playerSelection, computerSelection);
+    if (winnerThisRound === "player"){
+        playerScore = ++playerScore;
+        console.log("Player won this round! Player has " + playerScore + " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "computer"){
+        computerScore === ++computerScore;
+        console.log("Computer won this round! Player has " + playerScore + " points. Computer has " + computerScore + " points.");
+    } else {
+        console.log("It was a tie!")
+    }
 
-    //Call playRound
-    //if player wins, add a point to their score
-    //if computer wins, add a point to its score
+
     //play 5 rounds
 }
 
-
 game();
+
