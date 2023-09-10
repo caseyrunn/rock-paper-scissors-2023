@@ -12,18 +12,21 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection){
     //if player and computer have same selection
         //it's a tie
-    //if player selects rock and computer selects paper
-        //computer wins
-    //if player selects rock and computer selects scissors
-        //player wins
-    //if player selects paper and computer selects rock
-        //player wins
-    //if player selects paper and computer selects scissors
-        //computer wins
-    //if player selects scissors and computer selects rock
-        //computer wins
-    //if player selects scissors and computer selects paper
-        //player wins
+    //else if player selects rock:
+        //and computer selects paper
+            //computer wins
+        //and computer selects scissors
+            //player wins
+    //else if player selects paper:
+        //and computer selects rock
+            //player wins
+        //and computer selects scissors
+            //computer wins
+    //else if player selects scissors
+        //and computer selects rock
+            //computer wins
+        //and computer selects paper
+            //computer wins
 }
 
 console.log(getComputerChoice());
