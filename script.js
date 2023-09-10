@@ -34,4 +34,11 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-console.log(playRound("Scissors","paper"));
+function game(){
+    //Create counter for player's score
+    //Create counter for computer's score
+    //Call playRound
+    //if player wins, add a point to their score
+    //if computer wins, add a point to its score
+    //play 5 rounds
+}
