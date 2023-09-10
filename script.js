@@ -37,8 +37,14 @@ function playRound(playerSelection, computerSelection){
 function game(){
     let playerScore = 0;
     let computerScore = 0;
+
+    let playerSelection = prompt("Rock, paper, or scissors?");
+    let computerSelection = getComputerChoice();
     //Call playRound
     //if player wins, add a point to their score
     //if computer wins, add a point to its score
     //play 5 rounds
 }
+
+let playerSelection = prompt("Rock, paper, or scissors?")
+console.log(playerSelection);
