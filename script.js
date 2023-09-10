@@ -40,11 +40,14 @@ function game(){
 
     let playerSelection = prompt("Rock, paper, or scissors?");
     let computerSelection = getComputerChoice();
+
+    console.log(playRound(playerSelection, computerSelection));
+
     //Call playRound
     //if player wins, add a point to their score
     //if computer wins, add a point to its score
     //play 5 rounds
 }
 
-let playerSelection = prompt("Rock, paper, or scissors?")
-console.log(playerSelection);
+
+game();
