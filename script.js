@@ -45,18 +45,103 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
 
+    //1//
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
 
     let winnerThisRound = playRound(playerSelection, computerSelection);
+
     if (winnerThisRound === "player"){
         playerScore = ++playerScore;
-        console.log("Player won this round! Player has " + playerScore + " points. Computer has " + computerScore + " points.");
+        console.log("Player won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
     } else if (winnerThisRound === "computer"){
         computerScore === ++computerScore;
-        console.log("Computer won this round! Player has " + playerScore + " points. Computer has " + computerScore + " points.");
-    } else {
-        console.log("It was a tie!")
+        console.log("Computer won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "tie"){
+        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
+        computerScore + " points.");
+    }
+
+    //2//
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+
+    winnerThisRound = playRound(playerSelection, computerSelection);
+
+    if (winnerThisRound === "player"){
+        playerScore = ++playerScore;
+        console.log("Player won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "computer"){
+        computerScore === ++computerScore;
+        console.log("Computer won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "tie"){
+        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
+        computerScore + " points.");
+    }
+
+    //3//
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+
+    winnerThisRound = playRound(playerSelection, computerSelection);
+
+    if (winnerThisRound === "player"){
+        playerScore = ++playerScore;
+        console.log("Player won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "computer"){
+        computerScore === ++computerScore;
+        console.log("Computer won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "tie"){
+        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
+        computerScore + " points.");
+    }
+
+    //4//
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+
+    winnerThisRound = playRound(playerSelection, computerSelection);
+
+    if (winnerThisRound === "player"){
+        playerScore = ++playerScore;
+        console.log("Player won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "computer"){
+        computerScore === ++computerScore;
+        console.log("Computer won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "tie"){
+        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
+        computerScore + " points.");
+    }
+
+    //5//
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+
+    winnerThisRound = playRound(playerSelection, computerSelection);
+
+    if (winnerThisRound === "player"){
+        playerScore = ++playerScore;
+        console.log("Player won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "computer"){
+        computerScore === ++computerScore;
+        console.log("Computer won this round! Player has " + playerScore + 
+        " points. Computer has " + computerScore + " points.");
+    } else if (winnerThisRound === "tie"){
+        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
+        computerScore + " points.");
     }
 }
+
+game();
+
+
 
