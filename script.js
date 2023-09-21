@@ -74,7 +74,8 @@ window.addEventListener('click', function(e){
     if (!playerSelection){
         return;
     }
-    console.log(playerSelection);
+    let computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
 });
 
 
