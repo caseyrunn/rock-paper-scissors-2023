@@ -69,7 +69,16 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 
-console.log(rock);
+window.addEventListener('click', function(e){
+    let playerSelection = (e.target.classList.value);
+    if (!playerSelection){
+        return;
+    }
+    console.log(playerSelection);
+});
+
+
+
 
 
 
