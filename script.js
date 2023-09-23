@@ -59,6 +59,12 @@ window.addEventListener('click', function(e){
     if (!playerSelection){
         return;
     }
+    if (roundsPlayed == 5) {
+        while(resultsDiv.firstChild){
+            resultsDiv.removeChild(resultsDiv.firstChild);
+            roundsPlayed = 0;
+        }
+    }
     let computerSelection = getComputerChoice();
     let roundResults = playRound(playerSelection, computerSelection);
 
