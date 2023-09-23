@@ -22,20 +22,26 @@ function playRound(playerSelection, computerSelection){
         return ("tie");
     }else if (playerSelection === "rock"){
         if (computerSelection === "paper"){
+            computerScore ++;
             return ("computer");
         }else{
+            playerScore ++;
             return ("player");
         }
     } else if (playerSelection === "paper"){
         if(computerSelection === "scissors"){
+            computerScore ++;
             return("computer");
         }else{
+            playerScore++;
             return("player");
         }
     } else if (playerSelection === "scissors"){
         if(computerSelection === "rock"){
+            computerScore++;
             return("computer");
         }else{
+            playerScore++;
             return("player");
         }
     }
@@ -70,6 +76,11 @@ const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 const resultsDiv = document.querySelector('.resultsDiv');
 
+let playerScore = 0;
+let computerScore = 0;
+
+
+
 window.addEventListener('click', function(e){
     let playerSelection = (e.target.classList.value);
     if (!playerSelection){
@@ -79,7 +90,7 @@ window.addEventListener('click', function(e){
     let roundResults = playRound(playerSelection, computerSelection);
 
     const result = this.document.createElement('div');
-    result.textContent = roundResults;
+    result.textContent = roundResults + " " + playerScore + " " + computerScore;
     resultsDiv.appendChild(result);
 
 
