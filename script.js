@@ -19,30 +19,30 @@ function getPlayerChoice(){
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
-        return ("tie");
+        return ("It was a tie!");
     }else if (playerSelection === "rock"){
         if (computerSelection === "paper"){
             computerScore ++;
-            return ("computer");
+            return ("Computer won!");
         }else{
             playerScore ++;
-            return ("player");
+            return ("Player won!");
         }
     } else if (playerSelection === "paper"){
         if(computerSelection === "scissors"){
             computerScore ++;
-            return("computer");
+            return("Computer won!");
         }else{
             playerScore++;
-            return("player");
+            return("Player won!");
         }
     } else if (playerSelection === "scissors"){
         if(computerSelection === "rock"){
             computerScore++;
-            return("computer");
+            return("Computer won!");
         }else{
             playerScore++;
-            return("player");
+            return("Player won!");
         }
     }
 }
@@ -91,13 +91,21 @@ window.addEventListener('click', function(e){
     let roundResults = playRound(playerSelection, computerSelection);
 
     const result = this.document.createElement('div');
-    result.textContent = roundResults + " " + playerScore + " " + computerScore;
+    result.textContent = `${roundResults} Player: ${playerScore} Computer: ${computerScore}`
     resultsDiv.appendChild(result);
 
     roundsPlayed++;
     if (roundsPlayed == 5){
-        console.log("game over");
-    }
+        const displayWinner = this.document.createElement('div');
+        if (computerScore == playerScore){
+            displayWinner.textContent = "Game over! It was a tie.";
+        } else if (computerScore > playerScore){
+            displayWinner.textContent = "Game over! Computer won."
+        } else if (playerScore > computerScore){
+            displayWinner.textContent = "Game over! Player won."
+        }
+        resultsDiv.appendChild(displayWinner);
+    };
 
 
 });
