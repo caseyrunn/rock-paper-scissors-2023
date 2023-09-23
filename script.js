@@ -78,6 +78,7 @@ const resultsDiv = document.querySelector('.resultsDiv');
 
 let playerScore = 0;
 let computerScore = 0;
+let roundsPlayed = 0;
 
 
 
@@ -92,6 +93,11 @@ window.addEventListener('click', function(e){
     const result = this.document.createElement('div');
     result.textContent = roundResults + " " + playerScore + " " + computerScore;
     resultsDiv.appendChild(result);
+
+    roundsPlayed++;
+    if (roundsPlayed == 5){
+        console.log("game over");
+    }
 
 
 });
