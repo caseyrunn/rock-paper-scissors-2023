@@ -11,11 +11,6 @@ function getComputerChoice(){
     }
 }
 
-function getPlayerChoice(){
-    let playerSelection = prompt("Rock, Paper, or Scissors?");
-    return (playerSelection.toLowerCase());
-}
-
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
@@ -47,29 +42,6 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
-
-    //1//
-    let playerSelection = getPlayerChoice();
-    let computerSelection = getComputerChoice();
-
-    let winnerThisRound = playRound(playerSelection, computerSelection);
-
-    if (winnerThisRound === "player"){
-        playerScore = ++playerScore;
-        console.log("Player won this round! Player has " + playerScore + 
-        " points. Computer has " + computerScore + " points.");
-    } else if (winnerThisRound === "computer"){
-        computerScore === ++computerScore;
-        console.log("Computer won this round! Player has " + playerScore + 
-        " points. Computer has " + computerScore + " points.");
-    } else if (winnerThisRound === "tie"){
-        console.log("It was a tie! Player has " + playerScore + " points. Computer has " +
-        computerScore + " points.");
-    }
-}
 
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
